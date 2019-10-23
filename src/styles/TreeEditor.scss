@@ -1,0 +1,40 @@
+.TreeEditor{
+
+    height: 100vh;
+
+    .list-block{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        height: 100%;
+
+        .one-block{
+            box-sizing: border-box;
+            padding: 30px;
+            width: 100%;
+        }
+
+        .one-block.b1{
+            width: 20vw;
+        }
+        .one-block.b2{
+            width: 25vw;
+        }
+        .one-block.b1, .one-block.b2{
+            border-right: 1px solid lightgray;
+        }
+
+    }
+
+    input{
+        background-color: transparent;
+        border: none;
+        height: 100%;
+    }
+    input:focus{
+        outline: none;
+    }
+
+}

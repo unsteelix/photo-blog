@@ -1,0 +1,9 @@
+{
+    "name": "blog",
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/(.*)main.css", "dest": "/main.css" },
+        { "src": "/(.*)index-bundle.js", "dest": "/index-bundle.js" },
+        { "src": "/(.*)", "dest": "/index.html" }
+    ]
+}

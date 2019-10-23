@@ -1,0 +1,24 @@
+.Door{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    //top: 50px;
+    left: 0;
+    background-color: white;
+
+    input{
+        width: 200px;
+        padding: 10px;
+        font-size: 22px;
+        border: 2px solid black;
+    }
+
+    input:focus{
+        outline: none
+    }
+}

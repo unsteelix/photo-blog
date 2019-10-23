@@ -1,0 +1,94 @@
+.PathEditor{
+
+    .path{
+        width: 20vw;
+        min-width: 200px;
+        border-right: 1px solid black;
+        input{
+            width: 100%;
+            text-align: left !important;
+        }
+    }
+    .pid{
+        width: 2vw;
+        min-width: 40px;
+        border-right: 1px solid black;
+        input{
+            width: 100%;
+        }
+    }
+    .priority{
+        width: 2vw;
+        min-width: 40px;
+        border-right: 1px solid black;
+        input{
+            width: 100%;
+        }
+    }
+    .delete{
+        width: 2vw;
+        min-width: 40px;
+        cursor: pointer;
+    }
+    .delete:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        font-size: 21px;
+        color: #191919;
+        padding: 5px 3px;
+        border: 2px solid #191919;
+        .delete:hover{
+            background-color: unset !important;
+            color: black !important;
+            cursor: unset !important;
+        }
+    }
+
+    .list-path{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        overflow-y: overlay;
+        overflow-x: hidden;
+        max-height: 90vh;
+
+        .one-path{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 2px solid black;
+            text-align: center;
+            font-size: 19px;
+            color: #444444;
+            padding: 5px;
+            input{
+                text-align: center;
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        font-size: 20px;
+
+        .add{
+            cursor: pointer;
+            padding: 5px;
+        }
+        .save{
+            cursor: pointer;
+            padding: 5px;
+        }
+    }
+
+}

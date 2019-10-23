@@ -1,0 +1,43 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+#app{
+    width: 100vw;
+    box-sizing: border-box;
+
+    .admin{
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
+.xc{
+    height: 100vh;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+
+.scrollbar::-webkit-scrollbar{width:5px}
+.scrollbar::-webkit-scrollbar-track{background:#cccccc;border-radius:0px}
+.scrollbar::-webkit-scrollbar-thumb{background:#608afb;border-radius:0px}

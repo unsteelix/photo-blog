@@ -1,0 +1,91 @@
+.PageEditor{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    .list-side{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        height: 100%;
+        width: 100%;
+
+        .one-side{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 50px;
+
+            textarea{
+                padding: 10px;
+                width: 100%;
+                overflow: auto;
+                height: 100%;
+                box-sizing: border-box;
+                outline: none;
+            }
+        }
+
+        .one-side.left{
+            border-right: 1px solid lightgray;
+        }
+
+        .one-side.right{
+            overflow-y: scroll;
+            overflow-x: hidden;
+            //max-height: 90vh;
+            height: 100%;
+        }
+    }
+
+    .bottom{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-sizing: border-box;   
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        div{
+            width: 100%;
+        }
+
+        .back{
+            border: 2px solid black;
+            margin: 10px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;    
+            div{
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }    
+        }
+
+        .save{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+    }
+
+}
