@@ -1,3 +1,4 @@
+/*
 const initPaths = {
     1 : {
         pid: 20,
@@ -59,9 +60,10 @@ const initPages = {
             content: 'fg re hhhhhhhhhhh'  
         }    
 }
+*/
 
 
-const initCurRole = 3;
+//const initCurRole = 3;
 
 import { SET_PATHS, SET_ROLES, SET_CUR_ROLE, SET_PAGES, SET_PAGE_CONTENT, SET_ALL_DATA } from '../actions/actionTypes'
 

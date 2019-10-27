@@ -6,14 +6,14 @@
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        //justify-content: space-around;
 
         height: 100%;
 
         .one-block{
             box-sizing: border-box;
             padding: 30px;
-            width: 100%;
+            //width: 100%;
         }
 
         .one-block.b1{

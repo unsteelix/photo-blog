@@ -1,16 +1,5 @@
 export function renderCustomTags(text){
 
-    // text
-    //not work with multi innering
-    /*
-    let res = text.replace(/\/tt[^(tt\/)]*tt\//gims, (match, offset, input) => {
-
-        let innerStr = match.slice(3, match.length-3);
-        return '<div class="block-text">' + innerStr + '</div>'
-    })
-    */
-
-    //WORKING
     let res = text.replace(/\/tt/gims, '<div class="block-text">')
     res = res.replace(/tt\//gims, '</div>')
 
@@ -38,11 +27,7 @@ export function renderCustomTags(text){
             
         }
 
-        
-
-        //console.log(innerStr)
-        //console.log(innerArr)
-        //console.log(subClass)
+    
 
         let listImg = innerArr.map((img)=>{
             return `<img class="one-img" src="${img.trim()}">`
@@ -52,8 +37,6 @@ export function renderCustomTags(text){
                    </div>`
         return res.replace(/,/gims,'') 
     });
-
-    //console.log(res)
 
     return res
 }

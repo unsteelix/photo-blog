@@ -108,11 +108,14 @@ class ListPageEditor extends Component {
     render() {
 
         let listPage = []
+        let indexRow = 0;
         for(let id in this.state.listPage){
             let page = this.state.listPage[id];
+            indexRow++;
+            let subClass = indexRow % 2 == 0 ? 'even' : 'odd';
             listPage.push(
             (
-                <div className="one-page" key={id}>
+                <div className={"one-page "+subClass} key={id}>
                     <div className="id">
                         {id}
                     </div>
@@ -145,7 +148,7 @@ class ListPageEditor extends Component {
                     <div className="sub-title">sub title</div>
                     <div className="img">img</div>
                     <div className="edit">edit</div>
-                    <div className="delete">del</div>
+                    <div className="delete"></div>
                 </div>
                 <div className="list-page scrollbar">
                     {listPage}

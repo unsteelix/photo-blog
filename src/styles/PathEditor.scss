@@ -1,34 +1,40 @@
+@import "Const";
+
 .PathEditor{
+
+    position: relative;
+    font-size: 14px;
+    border: 1px solid $colorBorderTree;
+    color: $colorMainTree;
 
     .path{
         width: 20vw;
         min-width: 200px;
-        border-right: 1px solid black;
+        border-right: 1px solid $colorBorderTree;
         input{
             width: 100%;
             text-align: left !important;
         }
     }
     .pid{
-        width: 2vw;
-        min-width: 40px;
-        border-right: 1px solid black;
+        width: 40px;
+        border-right: 1px solid $colorBorderTree;
         input{
             width: 100%;
         }
     }
     .priority{
-        width: 2vw;
-        min-width: 40px;
-        border-right: 1px solid black;
+        width: 40px;
+        border-right: 1px solid $colorBorderTree;
         input{
             width: 100%;
         }
     }
     .delete{
-        width: 2vw;
-        min-width: 40px;
+        width: 26px;
+        height: 20px;
         cursor: pointer;
+        text-align: center;
     }
     .delete:hover{
         background-color: black;
@@ -38,11 +44,16 @@
     .header{
         display: flex;
         flex-direction: row;
-        text-align: center;
-        font-size: 21px;
-        color: #191919;
-        padding: 5px 3px;
-        border: 2px solid #191919;
+        
+        border-bottom: 1px solid $colorBorderTree;
+        font-weight: bold;
+        color: black;
+
+        div{
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
         .delete:hover{
             background-color: unset !important;
             color: black !important;
@@ -63,13 +74,13 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            border-bottom: 2px solid black;
-            text-align: center;
-            font-size: 19px;
-            color: #444444;
-            padding: 5px;
-            input{
-                text-align: center;
+            align-items: center;
+            
+            &.even{
+                
+            }
+            &.odd{
+                background-color: #ececec;
             }
         }
     }
@@ -77,9 +88,8 @@
     .bottom{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         text-align: center;
-        font-size: 20px;
 
         .add{
             cursor: pointer;
@@ -91,4 +101,7 @@
         }
     }
 
+    input{
+        padding: 3px;
+    }
 }

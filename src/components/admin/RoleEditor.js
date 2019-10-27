@@ -92,7 +92,6 @@ class RoleEditor extends Component {
     saveButton(){
 
         let roles= this.state.listRole;
-        //this.props.setRoles(roles)
         firebase.database().ref().update({
             roles: roles
         }, (error) => {
@@ -109,19 +108,22 @@ class RoleEditor extends Component {
     render() {
 
         let listRole = []
+        let indexRow = 0;
         for(let id in this.state.listRole){
             let role = this.state.listRole[id];
+            indexRow++;
+            let subClass = indexRow % 2 == 0 ? 'even' : 'odd';
             listRole.push(
             (
-                <div className="one-role" key={id}>
+                <div className={"one-role "+subClass} key={id}>
                     <div className="role">
-                        <input type="text" value={role.role} onChange={ (e) => {this.roleChange(id, 'role', e.target.value)} } />
+                        <input type="text" value={role.role} onChange={ (e) => {this.roleChange(id, 'role', e.target.value)} } placeholder="..." />
                     </div>
                     <div className="available">
-                        <input type="text" value={role.available} onChange={ (e) => {this.roleChange(id, 'available', e.target.value)} } />
+                        <input type="text" value={role.available} onChange={ (e) => {this.roleChange(id, 'available', e.target.value)} } placeholder="..."/>
                     </div>
                     <div className="unavailable">
-                        <input type="text" value={role.unavailable} onChange={ (e) => {this.roleChange(id, 'unavailable', e.target.value)} } />
+                        <input type="text" value={role.unavailable} onChange={ (e) => {this.roleChange(id, 'unavailable', e.target.value)} } placeholder="..."/>
                     </div>
                     <div className="delete" onClick={ () => this.deleleRole(id) }>
                         x

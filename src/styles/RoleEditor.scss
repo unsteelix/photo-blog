@@ -1,8 +1,11 @@
+@import "Const";
+
 .RoleEditor{
 
     position: relative;
     font-size: 14px;
-    padding: 30px 0;
+    border: 1px solid $colorBorderTree;
+    color: $colorMainTree;
 
     .role{
         width: 100px;
@@ -23,6 +26,9 @@
         flex-direction: row;
 
         padding: 5px 11px;
+        border-bottom: 1px solid $colorBorderTree;
+        font-weight: bold;
+        color: black;
 
         div{
 
@@ -33,12 +39,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 10px;
 
         div{
             cursor: pointer;
             padding: 4px 10px 6px 10px;
-            border-radius: 8px;
         }
         div:hover{
             background-color: black;
@@ -53,36 +57,40 @@
         .one-role{
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
             
-            background-color: black;
-            color: white;
-            margin: 5px 0;
-            padding: 3px 11px 5px 11px;
-            border-radius: 8px;
+            &.even{
+                
+            }
+            &.odd{
+                background-color: #ececec;
+            }
         }
     }
 
     .delete{
         position: absolute;
-        right: -22px;
+        right: 0px;
         cursor: pointer;
-        color: black;
-        border-radius: 8px;
+        color: $colorMainTree;
         width: 20px;
         height: 20px;
         text-align: center;
     }
     .delete:hover{
-        background-color: black;
-        color: white;
+        //background-color: black;
+        color: black;
+        //border: 1px solid grey;
     }
 
     input{
-        color: white;
         width: 100%;
+        padding: 3px;
+        //border: 1px solid grey !important;
     }
     input:focus{
         color: black;
-        background-color: white;
+        //background-color: white;
     }
 }

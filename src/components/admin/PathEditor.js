@@ -12,7 +12,6 @@ class PathEditor extends Component {
         this.state = { 
             listPath: {}
         };
-        //this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount(){
@@ -93,7 +92,6 @@ class PathEditor extends Component {
     saveButton(){
 
         let paths= this.state.listPath;
-        //this.props.setPaths(paths)
         firebase.database().ref().update({
             paths: paths
         }, (error) => {
@@ -110,11 +108,14 @@ class PathEditor extends Component {
     render() {
         
         let listPath = []
+        let indexRow = 0;
         for(let id in this.state.listPath){
             let path = this.state.listPath[id];
+            indexRow++;
+            let subClass = indexRow % 2 == 0 ? 'even' : 'odd';
             listPath.push(
             (
-                <div className="one-path" key={id}>
+                <div className={"one-path "+subClass} key={id}>
                     <div className="path">
                         <input type="text" value={path.path} onChange={ (e) => {this.pathChange(id, 'path', e.target.value)} } />
                     </div>
@@ -133,26 +134,13 @@ class PathEditor extends Component {
 
         }
 
-        /*
-        const listPath = this.state.listPath.map(path => {
-            return (
-                <div className="one-path" key={path.id}>
-                    <div className="path">
-                        <input type="text" value={path.path} onChange={ (e) => {this.handleClick(e)} } />
-                    </div>
-                    <div className="pid">{path.pid}</div>
-                    <div className="priority">{path.priority}</div>
-                </div>
-            )
-        });
-*/
         return (
             <div className="PathEditor">
                 <div className="header">
                     <div className="path">path</div>
                     <div className="pid">pid</div>
                     <div className="priority">lvl</div>
-                    <div className="delete">x</div>
+                    <div className="delete"></div>
                 </div>
                 <div className="list-path scrollbar">
                     {listPath}
